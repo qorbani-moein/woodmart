@@ -306,11 +306,11 @@ if ( ! function_exists( 'woodmart_shortcode_products' ) ) {
 				$page_home = 'https://' . $_SERVER['SERVER_NAME'] . '/';
 				$stock_status = $product->get_stock_status();
 				if ($stock_status != "outofstock" && $current_page == $page_home ){
-					$products->the_post();
-					wc_get_template_part( 'content', 'product' );
+					// $products->the_post();
+					// wc_get_template_part( 'content', 'product' );
 				}elseif( $current_page != $page_home){
-					$products->the_post();
-					wc_get_template_part( 'content', 'product' );
+					// $products->the_post();
+					// wc_get_template_part( 'content', 'product' );
 				}
 
 			endwhile;
