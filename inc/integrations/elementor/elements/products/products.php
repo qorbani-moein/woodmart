@@ -380,8 +380,8 @@ if ( ! function_exists( 'woodmart_elementor_products_template' ) ) {
 		<?php endif; ?>
 
 		<?php while ( $products->have_posts() ) : ?>
-			<?php $products->the_post(); ?>
-			<?php wc_get_template_part( 'content', 'product' ); ?>
+			<?php //$products->the_post(); ?>
+			<?php //wc_get_template_part( 'content', 'product' ); ?>
 		<?php endwhile; ?>
 
 		<?php if ( ! $is_ajax ) : ?>
