@@ -99,30 +99,9 @@ if( ! $is_slider ){
 
 woodmart_enqueue_product_loop_styles( $hover );
 
-//moein qorbani
-//hidden outofstock product
-$current_page = $_SERVER['SCRIPT_URI'];
-$page_home = 'https://' . $_SERVER['SERVER_NAME'] . '/';
+	<div <?php wc_product_class( $classes, $product ); ?> data-loop="<?php echo esc_attr( $woocommerce_loop ); ?>" data-id="<?php echo esc_attr( $product->get_id() ); ?>">
 
-$stock_status = $product->get_stock_status();
-if ($stock_status != "outofstock" && $current_page == $page_home ){
+		<?php wc_get_template_part( 'content', 'product-' . $hover ); ?>
 
-	?>
-		<div <?php wc_product_class( $classes, $product ); ?> data-loop="<?php echo esc_attr( $woocommerce_loop ); ?>" data-id="<?php echo esc_attr( $product->get_id() ); ?>">
+	</div>
 
-			<?php wc_get_template_part( 'content', 'product-' . $hover ); ?>
-
-		</div>
-
-	<?php
-}elseif( $current_page != $page_home){
-	?>
-		<div <?php wc_product_class( $classes, $product ); ?> data-loop="<?php echo esc_attr( $woocommerce_loop ); ?>" data-id="<?php echo esc_attr( $product->get_id() ); ?>">
-
-			<?php wc_get_template_part( 'content', 'product-' . $hover ); ?>
-
-		</div>
-
-	<?php
-}
-?>
