@@ -370,7 +370,7 @@ if ( ! function_exists( 'woodmart_elementor_products_template' ) ) {
 				</div>
 			<?php endif; ?>
 
-			<div class="products moein_test_tab elements-grid align-items-start row wd-products-holder<?php echo esc_attr( $wrapper_classes ); ?>" data-paged="1" data-atts="<?php echo esc_attr( $encoded_settings ); ?>" data-source="shortcode" data-columns="<?php echo isset( $settings['columns']['size'] ) ? esc_attr( $settings['columns']['size'] ) : ''; ?>">
+			<div class="products elements-grid align-items-start row wd-products-holder<?php echo esc_attr( $wrapper_classes ); ?>" data-paged="1" data-atts="<?php echo esc_attr( $encoded_settings ); ?>" data-source="shortcode" data-columns="<?php echo isset( $settings['columns']['size'] ) ? esc_attr( $settings['columns']['size'] ) : ''; ?>">
 		<?php endif; ?>
 
 		<?php if ( ( ! $is_ajax || 'arrows' === $settings['pagination'] ) && $settings['element_title'] ) : ?>
