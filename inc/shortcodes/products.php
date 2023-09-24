@@ -301,8 +301,8 @@ if ( ! function_exists( 'woodmart_shortcode_products' ) ) {
 
 		if ( $products->have_posts() ) :
 			while ( $products->have_posts() ) :
-				//$products->the_post();
-				//wc_get_template_part( 'content', 'product' );
+				$products->the_post();
+				wc_get_template_part( 'content', 'product' );
 				// $current_page = $_SERVER['SCRIPT_URI'];
 				// $page_home = 'https://' . $_SERVER['SERVER_NAME'] . '/';
 				// $stock_status = $product->get_stock_status();
